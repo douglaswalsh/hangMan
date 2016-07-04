@@ -4,7 +4,6 @@ import java.io.Console;
 
 
 public class gameHelper {
-	Computer d = new Computer();
 	String targetWord;
 	//Scanner userInput = new Scanner(System.in);
 	Scanner userGuess = new Scanner(System.in);
@@ -28,35 +27,21 @@ public class gameHelper {
 
 	
 	void setTargetWord() {
-		if (onePlayer == false) {
 		Console cnsl = null;
 		cnsl = System.console();
 		targetWord = new String(cnsl.readPassword("please enter the word to guess: "));
 		for (char c : targetWord.toCharArray()) {
 			guessList.add(c);
 			}	
-		} else  {
-			String targetWord2 = new String(d.computerWord);
-				for (char c : targetWord2.toCharArray()) {
-			guessList.add(c);
-			}
-
 		}
-	}
+	
 
 	void setAnswer() {
-		if (onePlayer == false) {
 		int i = 0;
 		for (i = 0; i < targetWord.length();i++) {
 			answer.add('-');
 			}
-		} else {
-			int i = 0;
-			for (i = 0; i < d.computerWord.length();i++) {
-			answer.add('-');
-			}
-
-		}
+		
 		System.out.println(answer);
 
 	}

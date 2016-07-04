@@ -22,13 +22,9 @@ public class GameLauncher {
 		} else {
 			c.createDictionary();
 			c.computerSetWord();
-			h.setTargetWord();
-			System.out.println(h.targetWord2);
-			System.out.println(h.guessList);
-			System.out.println(h.answer);
-			//System.out.println(c.computerWord);
-			//h.makeGuess();
-			//h.endGame();
+			c.computerSetAnswer();
+			c.compMakeGuess();
+			c.compEndGame();
 		}
 
 
